@@ -3,4 +3,4 @@ layout: default
 permalink: /
 ---
 
-{% include landing.html %}
+{% include 2-licenses-project.html %}
