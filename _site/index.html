@@ -63,6 +63,22 @@
 <h2 id="search-the-data--methods">Search The Data &amp; Methods</h2>
 
 <!-- these are written in a combo of html and liquid -->
+<h1>Write Up</h1>
+<h3>PLOT 1</h3>
+
+<h4>License Type vs Frequency</h4>
+
+The first plot I have created visualizes the frequency of each license type in the driving license dataset. I chose to display this data in a histogram with the encoding types of license type and frequency being nominal and quantitative respectively. I chose to color this plot by frequency or count because it segments the data by the tooltip nicely and highlights various information. I did not choose a specific color scheme since I felt like as long as the colors were distinct, it would do the job with a histogram. I did not do any data transformations because the data is nominal and did not require any cleaning. The only similarity between this plot and the plot in homework 9 was the similar use of License Type and Count as well as using a histogram. In order to get things to work with Altair, I added tooltips and added coloring to take advantage of additional functionality. 
+
+<h3>PLOT 2</h3>
+
+<h4>License Status vs Frequency</h4>
+
+For the second plot, I compared frequency of ids with license status in a histogram. The encoding types are similar to plot 1 in which the frequency is quantitative and the license status is nominal. Color scheme mimics plot 1 since the data types are similar and the visualization method is the same. No transformations were made and the same similarities as plot 1 exist in plot2, the use of count and histograms. 
+
+
+<h4>Interactivity:</h4>
+I chose to implement tooltips on both plots. I used License type and description as well as count as part of the tooltips in order to create sections of the histogram that provide value to the user. This makes the visualization more interesting because when the user hovers over a bin in the histogram they can see the exact count number as well as more specific license types as well as which license types are in which status. 
 
 <div class="left">
 <a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/vega/vega/blob/main/docs/data/cars.json">
