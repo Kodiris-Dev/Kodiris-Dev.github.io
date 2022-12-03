@@ -50,48 +50,11 @@
 <body class="h-100 d-flex flex-column">
 
   <main class="flex-shrink-0 container mt-5">
-    <nav class="navbar navbar-expand-lg navbar-themed">
-
-  <a class="navbar-brand" href="/"><h5><b>Jill Naiman</b></h5></a>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <i class="fas fa-1x fa-bars text-themed"></i>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="/projects/">Projects</a>
-
-      <a class="nav-item nav-link " href="/blog/">Blog</a>
-
-      <a class="nav-item nav-link " href="/about/">About</a>
-
-      
-
-      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
-    </div>
-  </div>
-
-</nav>
     <body class="h-100 d-flex flex-column">
 
   <main class="flex-shrink-0 container mt-5">
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  <h1><b>Prediciting Premier League Soccer Wins</b></h1>
-
-<p class="post-metadata text-muted">
-  02 December 2022 -  
-  <b>25 mins read time</b>
-
-  <br />Tags: 
-    
-    <a class="text-decoration-none no-underline" href="/blog/tags#technology">
-      <span class="tag badge badge-pill text-primary border border-primary">Technology</span>
-    </a>
-    
-    <a class="text-decoration-none no-underline" href="/blog/tags#blogging">
-      <span class="tag badge badge-pill text-primary border border-primary">Blogging</span>
-    </a>
-    </p>
+  <h1><b>Predicting Premier League Soccer Wins</b></h1>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
@@ -109,7 +72,7 @@
 </code></pre></div></div>
 
 <h1 id="purpose">Purpose</h1>
-<p>The purpose of this notebook is to analyze soccer data - more specifically premier league data that gives basic insight into match stats throughout multiple seasons.</p>
+<p>The purpose of this article is to analyze soccer data - more specifically premier league data that gives basic insight into match stats throughout multiple seasons.</p>
 
 <p>The idea behind utilizing this dataset for the purpose of argument was trying to find trends in the data that could tell stories about teams in the league as well as predict how future teams could perform based on those stories.</p>
 
@@ -391,7 +354,7 @@ memory usage: 8.5+ KB
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;seaborn.axisgrid.FacetGrid at 0x1e636a80c40&gt;
 </code></pre></div></div>
 
-<p><img src="_includes/final-project-xavier-ruiz-part3_files/final-project-xavier-ruiz-part3_12_1.png" alt="png" /></p>
+<p><img src="https://github.com/Kodiris-Dev/Kodiris-Dev.github.io/blob/main/_includes/final-project-xavier-ruiz-part3_files/final-project-xavier-ruiz-part3_12_1.png?raw=true" alt="png" /></p>
 
 <p>As visible above, the relationship between goals and wins is relatively linear, suggesting that a linear regression prediction model would work in predicting one of the variables. This makes sense from a non technical point of view since the more goals a team scores in a match increases the likelihood of said team winning the match. However, this isn’t a guarantee, since in some scenarios throughout the season as a whole, a team can score a lot of goals, but concede more goals than scored, resulting in more goals scored per match won than expected. This outcome turns the linear relationship slightly non-linear. For the scope of this project however, a linear regression is a decent start.</p>
 
@@ -436,7 +399,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div></div>
 
-<p><img src="final-project-xavier-ruiz-part3_files/final-project-xavier-ruiz-part3_17_0.png" alt="png" /></p>
+<p><img src="https://github.com/Kodiris-Dev/Kodiris-Dev.github.io/blob/main/_includes/final-project-xavier-ruiz-part3_files/final-project-xavier-ruiz-part3_17_0.png?raw=true" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mae</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="o">=</span><span class="n">y_pred</span><span class="p">)</span>
 <span class="c1">#squared True returns MSE value, False returns RMSE value.
@@ -520,7 +483,7 @@ slope: [[0.33830138]]
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;seaborn.axisgrid.FacetGrid at 0x1e637284160&gt;
 </code></pre></div></div>
 
-<p><img src="final-project-xavier-ruiz-part3_files/final-project-xavier-ruiz-part3_27_1.png" alt="png" /></p>
+<p><img src="https://github.com/Kodiris-Dev/Kodiris-Dev.github.io/blob/main/_includes/final-project-xavier-ruiz-part3_files/final-project-xavier-ruiz-part3_27_1.png?raw=true" alt="png" /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">final_data2</span><span class="p">[</span><span class="s">'total_pass'</span><span class="p">]).</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">final_data2</span><span class="p">[</span><span class="s">'goals'</span><span class="p">]).</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -573,66 +536,15 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div></div>
 
-<p><img src="final-project-xavier-ruiz-part3_files/final-project-xavier-ruiz-part3_33_0.png" alt="png" /></p>
+<p><img src="https://github.com/Kodiris-Dev/Kodiris-Dev.github.io/blob/main/_includes/final-project-xavier-ruiz-part3_files/final-project-xavier-ruiz-part3_33_0.png?raw=true" alt="png" /></p>
 
 <p>Polynomial regression not ideal</p>
 
-<h3 id="interactive-graph-1">Interactive Graph</h3>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-
-<span class="o">@</span><span class="n">ipywidgets</span><span class="p">.</span><span class="n">interact</span><span class="p">(</span><span class="n">passes</span><span class="o">=</span><span class="n">ipywidgets</span><span class="p">.</span><span class="n">BoundedIntText</span><span class="p">(</span>
-    <span class="n">value</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span>
-    <span class="nb">min</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span>
-    <span class="nb">max</span><span class="o">=</span><span class="mi">30000</span><span class="p">,</span>
-    <span class="n">step</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s">'Passes:'</span><span class="p">,</span>
-    <span class="n">disabled</span><span class="o">=</span><span class="bp">False</span>
-<span class="p">))</span>
-<span class="k">def</span> <span class="nf">predict_goals</span><span class="p">(</span><span class="n">passes</span><span class="p">):</span>
-    <span class="c1"># Predict a Response and print it:
-</span>    <span class="n">passes_data</span> <span class="o">=</span> <span class="n">poly</span><span class="p">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="n">passes</span><span class="p">]).</span><span class="n">reshape</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
-    <span class="n">y_pred</span> <span class="o">=</span> <span class="n">poly_reg_model</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">passes_data</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">'Predicted goals:'</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
-
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">sns</span><span class="p">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span><span class="s">"total_pass"</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span><span class="s">"goals"</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">final_data2</span><span class="p">,</span> <span class="n">order</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">ci</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
-    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">passes</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'r'</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">y_pred</span>
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>interactive(children=(BoundedIntText(value=10000, description='Passes:', max=30000, min=8000, step=1000), Outp…
-</code></pre></div></div>
-
-<h1 id="dashboard">Dashboard</h1>
-
-<p><strong>HOW TO USE</strong></p>
-
-<p>The dashboard takes any number of total passes that a team in the premier league has completed in the entire season. The first graph will then update the number of goals that team is expected to score based on passes completed, and then interact with the second graph to predict the number of wins the team will end the season with. Both outputs will be printed to the screen.</p>
 
 <p>To compare predicted outputs to real outputs, use the link below
 https://www.premierleague.com/stats/top/clubs/wins?se=363</p>
 
-<p>Pick a team in the 2020-2021 season (was not in testing or training dataset) and filter by passes completed to enter the value into the notebook. Then compare goals/wins that season to the predicted output.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#myLabel = ipywidgets.Label()
-</span><span class="o">@</span><span class="n">ipywidgets</span><span class="p">.</span><span class="n">interact</span><span class="p">(</span><span class="n">passes</span><span class="o">=</span><span class="n">ipywidgets</span><span class="p">.</span><span class="n">BoundedIntText</span><span class="p">(</span>
-    <span class="n">value</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span>
-    <span class="nb">min</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span>
-    <span class="nb">max</span><span class="o">=</span><span class="mi">28000</span><span class="p">,</span>
-    <span class="n">step</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s">'Passes:'</span><span class="p">,</span>
-    <span class="n">disabled</span><span class="o">=</span><span class="bp">False</span>
-<span class="p">))</span>
-<span class="k">def</span> <span class="nf">dashboard</span><span class="p">(</span><span class="n">passes</span><span class="p">):</span>
-    <span class="n">goals</span> <span class="o">=</span> <span class="n">predict_goals</span><span class="p">(</span><span class="n">passes</span><span class="p">)</span>
-    <span class="n">wins</span> <span class="o">=</span> <span class="n">predict_wins</span><span class="p">(</span><span class="n">goals</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">'Goals:'</span><span class="p">,</span> <span class="n">goals</span><span class="p">,</span> <span class="s">'Wins:'</span><span class="p">,</span> <span class="n">wins</span><span class="p">)</span>
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>interactive(children=(BoundedIntText(value=10000, description='Passes:', max=28000, min=8000, step=1000), Outp…
-</code></pre></div></div>
-
-<p>The dashboard is a visual culmination of the models that predict both wins from goals as well as goals from total passes in a season. This method of visualization provides a link between total passes in a season and a predicted number of matches won in the same season. Entering 10000 passes with this iteration of the model outputs a prediction of 43.8 goals and 11.8 wins, indicating that a team in the premier league who only passes the ball 10000 times in a season would most likely end up at the bottom of the league with only 11 wins out of 34 games.</p>
 
 <h1 id="evaluate-output-for-observations">Evaluate Output for Observations</h1>
 <p>The first step in evaluation the models for the purpose of observation and making claims is to gather additional data not already included in the training and testing datasets. The premier league website has such additional data from the 2021/22 season not in the previous dataset, displayed below:</p>
@@ -656,7 +568,17 @@ https://www.premierleague.com/stats/top/clubs/wins?se=363</p>
 <p>While this is can be fascinating on its own, there is a larger impact on the game of soccer as a whole. Creating thorough and plentiful models on all statistics of the game can output a rankings list of statistics that can impact win/loss ratios the most. These statiistics can then direct soccer teams to invest resources in increasing total passes, tackles won, or even perhaps limiting fouls received (or increasing fouls given) in order to increase a teams win/loss percentage.</p>
 
 
-
+<div class="left">
+  <a class="m-1 btn btn-outline-primary btn-2 " href="https://raw.githubusercontent.com/Kodiris-Dev/HelloWorld/main/stats.csv">
+    The Data
+  </a>
+  </div>
+  
+  <div class="right">
+  <a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/Kodiris-Dev/Kodiris-Dev.github.io/blob/main/python_notebooks/final-project-xavier-ruiz-part3.ipynb">
+    The Analysis
+  </a>
+  </div>
 <!-- Custom page specific js files -->
   
 <script src="/assets/js/vega.min.js" type="text/javascript"></script>
